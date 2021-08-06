@@ -12,13 +12,13 @@ import static org.assertj.core.api.BDDAssertions.*;
 
 @DataJpaTest
 @RequiredArgsConstructor
-class PaymentServiceApiApplicationTests {
+class PaymentServiceApiRepositoryTests {
 
 	@Autowired
 	private PaymentRepository paymentRepository;
 
 	@Test
-	void getPayment(){
+	void getPaymentByIdTest(){
 		//given
 		Payment savedPayment = paymentRepository.save(new Payment(1l,1526.0, "success"));
 		//when
