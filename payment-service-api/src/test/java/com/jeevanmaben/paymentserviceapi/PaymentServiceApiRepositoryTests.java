@@ -3,12 +3,11 @@ package com.jeevanmaben.paymentserviceapi;
 import com.jeevanmaben.paymentserviceapi.domain.Payment;
 import com.jeevanmaben.paymentserviceapi.repository.PaymentRepository;
 import lombok.RequiredArgsConstructor;
-import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-import static org.assertj.core.api.BDDAssertions.*;
+import static org.assertj.core.api.BDDAssertions.then;
 
 @DataJpaTest
 @RequiredArgsConstructor
@@ -24,7 +23,7 @@ class PaymentServiceApiRepositoryTests {
 		//when
 		Payment payment = paymentRepository.getPaymentById(savedPayment.getId());
 		//then
-		then(payment.getId()).isEqualTo(savedPayment.getId());
+		then(payment).isEqualTo(savedPayment);
 	}
 
 }
