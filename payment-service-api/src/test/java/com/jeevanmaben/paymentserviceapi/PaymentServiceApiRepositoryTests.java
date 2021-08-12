@@ -19,7 +19,7 @@ class PaymentServiceApiRepositoryTests {
 	@Test
 	void getPaymentByIdTest(){
 		//given
-		Payment savedPayment = paymentRepository.save(new Payment(1l,1526.0, "success"));
+		Payment savedPayment = paymentRepository.save(new Payment(1l,1526.0, "success", 1l));
 		//when
 		Payment payment = paymentRepository.getPaymentById(savedPayment.getId());
 		//then

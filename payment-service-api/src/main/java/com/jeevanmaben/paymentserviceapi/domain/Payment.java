@@ -18,4 +18,5 @@ public class Payment {
     private Long id;
     private Double amount;
     private String status;
+    private Long orderId;
 }

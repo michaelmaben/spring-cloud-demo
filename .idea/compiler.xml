@@ -7,19 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="order-service-api" />
         <module name="payment-service-api" />
+        <module name="store-order-service-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="order-service-api" target="11" />
       <module name="payment-service-api" target="11" />
+      <module name="store-order-service-api" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="order-service-api" options="-parameters" />
       <module name="payment-service-api" options="-parameters" />
+      <module name="store-order-service-api" options="-parameters" />
     </option>
   </component>
 </project>
