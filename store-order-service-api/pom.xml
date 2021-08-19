@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.3</version>
+		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jeevanmaben</groupId>
-	<artifactId>order-service-api</artifactId>
+	<artifactId>store-order-service-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>order-service-api</name>
+	<name>store-order-service-api</name>
 	<description>Order API</description>
 	<properties>
 		<java.version>11</java.version>
@@ -48,6 +48,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

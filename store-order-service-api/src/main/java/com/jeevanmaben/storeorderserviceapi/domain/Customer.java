@@ -1,7 +1,8 @@
-package com.jeevanmaben.orderserviceapi.domain;
+package com.jeevanmaben.storeorderserviceapi.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -9,11 +10,13 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+@Entity
+@Table(name="Customer")
+@EqualsAndHashCode
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    @OneToMany
-    @JoinColumn(name = "id", nullable = false)
-    Product products;
+    @Column(name = "type")
+    private String type;
 }
