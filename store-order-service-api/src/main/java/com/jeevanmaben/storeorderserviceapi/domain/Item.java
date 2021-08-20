@@ -19,5 +19,6 @@ public class Item {
     private Long id;
     @OneToOne
     private Product product;
+    @Column
     private Long quantity;
 }
