@@ -3,11 +3,9 @@ package com.jeevanmaben.storeorderserviceapi.repository;
 import com.jeevanmaben.storeorderserviceapi.domain.Customer;
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Optional;
 
@@ -24,7 +22,7 @@ public class CustomerRepositoryTests {
     TestEntityManager testEntityManager;
 
     @Test
-    void getAllCustomers(){
+    void getCustomer(){
         //given
         Customer savedCustomer = testEntityManager.persist(new Customer(null,"Online"));
         //when
