@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/payment-service-api/payment-service-api.iml" filepath="$PROJECT_DIR$/payment-service-api/payment-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serviceregistry/serviceregistry.iml" filepath="$PROJECT_DIR$/serviceregistry/serviceregistry.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-integrate.iml" filepath="$PROJECT_DIR$/.idea/spring-integrate.iml" />
       <module fileurl="file://$PROJECT_DIR$/store-order-service-api/store-order-service-api.iml" filepath="$PROJECT_DIR$/store-order-service-api/store-order-service-api.iml" />
     </modules>
