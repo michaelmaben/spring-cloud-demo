@@ -17,7 +17,7 @@ public class OrderService {
 
     public CustomerOrder createOrder(CustomerOrder customerOrder){
         CustomerOrder order = orderRepository.save(customerOrder);
-        Payment payment = new Payment(1234.00, order.getId());
+        Payment payment = new Payment(order.getTotal(), order.getId());
         restTemplate.postForObject(
                 "http://PAYMENT-SERVICE/payments/api/pay", payment, Payment.class);
         return order;

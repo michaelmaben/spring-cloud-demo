@@ -20,4 +20,7 @@ public class CustomerOrder {
 
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Item> items = new ArrayList<>();
+
+    @Column(name= "total")
+    private Double total;
 }
