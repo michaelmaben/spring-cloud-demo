@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.util.UUID;
+
 import static org.assertj.core.api.BDDAssertions.then;
 
 @DataJpaTest
@@ -19,7 +21,7 @@ class PaymentServiceApiRepositoryTests {
 	@Test
 	void getPaymentByIdTest(){
 		//given
-		Payment savedPayment = paymentRepository.save(new Payment(1l,1526.0, "success", 1l));
+		Payment savedPayment = paymentRepository.save(new Payment(1l,1526.0, "success", 1l, UUID.randomUUID()));
 		//when
 		Payment payment = paymentRepository.getPaymentById(savedPayment.getId());
 		//then
