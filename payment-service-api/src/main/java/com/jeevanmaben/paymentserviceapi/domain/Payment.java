@@ -5,9 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -17,6 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Payment {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Double amount;
     private String status;

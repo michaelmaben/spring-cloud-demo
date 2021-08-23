@@ -20,6 +20,7 @@ public class PaymentService {
 
     public Payment makePayment(Payment payment){
         payment.setTransactionId(createTxId());
+        System.out.println("Payment****: " + payment);
         return paymentRepository.save(payment);
     }
 

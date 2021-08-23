@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/payment/api")
+@RequestMapping("/payments/api")
 public class PaymentController {
 
     @Autowired
     PaymentService paymentService;
 
-    @PostMapping("/payment")
+    @PostMapping("/pay")
     public ResponseEntity<Payment> makePayment(@RequestBody Payment payment){
         return new ResponseEntity<Payment>(paymentService.makePayment(payment), HttpStatus.CREATED);
     }
