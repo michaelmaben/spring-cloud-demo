@@ -24,6 +24,12 @@ public class PaymentService {
         return paymentRepository.save(payment);
     }
 
+    public Payment getPaymentDetailsForOrder(Long orderId){
+        return paymentRepository.findPaymentByOrderId(orderId).orElseThrow(
+                ()-> new RuntimeException("Payment details not found for order " + orderId)
+        );
+    }
+
     private UUID createTxId(){
         return UUID.randomUUID();
     }

@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Optional;
+
 @Service
 public class OrderService {
     @Autowired
@@ -21,6 +23,12 @@ public class OrderService {
         restTemplate.postForObject(
                 "http://PAYMENT-SERVICE/payments/api/pay", payment, Payment.class);
         return order;
+    }
+
+    public CustomerOrder getOrderDetails(Long orderId){
+        return orderRepository.findOrderById(orderId).orElseThrow(
+                ()-> new RuntimeException("Order Id not found Exception" + orderId)
+        );
     }
 
 }

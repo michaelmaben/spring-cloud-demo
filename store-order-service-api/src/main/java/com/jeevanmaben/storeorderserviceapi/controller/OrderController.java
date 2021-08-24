@@ -5,10 +5,7 @@ import com.jeevanmaben.storeorderserviceapi.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/orders/api")
@@ -19,5 +16,11 @@ public class OrderController {
     @PostMapping("/order")
     public ResponseEntity<CustomerOrder> createOrder(@RequestBody CustomerOrder customerOrder){
         return new ResponseEntity<>(orderService.createOrder(customerOrder), HttpStatus.CREATED) ;
+    }
+
+    @GetMapping("/order/{orderId}")
+    public ResponseEntity<CustomerOrder> getOrderDetails(@PathVariable Long orderId){
+        System.out.println("Call received for order id lookup");
+        return new ResponseEntity<>(orderService.getOrderDetails(orderId), HttpStatus.FOUND);
     }
 }
