@@ -34,6 +34,7 @@
         <option value="$PROJECT_DIR$/store-order-service-api/pom.xml" />
         <option value="$PROJECT_DIR$/serviceregistry/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
       </list>
     </option>
   </component>
