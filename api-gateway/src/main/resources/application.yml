@@ -25,21 +25,4 @@ spring:
             args:
               name: paymentcb
               fallbackUri: forward:/paymentfallback
-eureka:
-  client:
-    serviceurl:
-      defaultZone: http://localhost:9090/eureka
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
-
-hystrix:
-  command:
-    fallbackcmd:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
